@@ -1,0 +1,93 @@
+******** GDR 4x4x4 Design Challenge - June 2021 *****************************
+
+Entry By: Gered King <gered@blarg.ca>
+
+Emojis Selected: Tomato / Thumbtack / Two Users / Grapes
+
+-------- CONCEPT ------------------------------------------------------------
+"Head-to-Head Fruit Popper"
+
+Play against a friend (or the computer), squaring-off in a garden with fruit
+magically growing quickly and at random. Be the fastest to pop the most fruit
+with your magical thumb-tack within the time limit! Your thumb-tack has been
+magically attuned to only one of two different types of fruit, while your
+opponent will be seeking out the opposite type of fruit.
+
+
+-------- PRESENTATION -------------------------------------------------------
+2D, top-down, single-screen arena. Kind of like Bomberman without the bombs?
+Players represented by character sprites that they control directly to move
+around the arena. The arena will have different (non-hazardous?) obstacles
+(walls), and fruit will be randomly spawning / dropping-in / etc as the game
+timer counts down.
+
+16x16 sprites/tiles.
+MS-DOS VGA Mode 13h.
+
+
+-------- CONTROLS -----------------------------------------------------------
+
+Keyboard.
+
+Single-player:
+  - Arrow keys for movement, 4 directional, N/S/E/W.
+  - Spacebar to use thumb-tack.
+
+Two-player:
+  - Player 1:
+    - Arrow keys / Num-pad for movement.
+    - Num-pad 0 / Num-pad Enter to use thumb-tack.
+
+  - Player 2:
+    - ASDW for movement
+    - Spacebar to use thumb-tack.
+
+Nice extra: Allow use of game controller (e.g. Gravis Gamepad).
+
+
+-------- GAMEPLAY -----------------------------------------------------------
+
+Players select their preferred fruit. Cannot be the same selection, so once
+one player selects a fruit, the other player is automatically assigned the
+other. Tomato or Grape.
+
+Once the match begins, the main objective is to pop the most fruit matching
+the player's fruit of choice.
+
+Popping the right fruit does not cause any penalty or other sort of effect
+to the other player, it simply increments the players score and the fruit
+vanishes.
+
+Popping the wrong fruit does not cause a penalty for the player that popped
+it, but the player receives no score for it.
+
+However, popping the wrong fruit causes your magically attuned thumbtack to
+trigger the fruit to explode, which does not harm you, but will "splash"
+toxic fruit juice over a 3x3 (TBD) tile area which will debuff the other
+player if they are within that area, causing them to move at 50% speed until
+the debuff wears off (2-3 seconds? TBD). Additionally, any other fruit of the
+same type within a 5x5 (TBD) tile area will magically vanish. So players may
+want to strategically pop the other players fruit to deny them score and slow
+them down.
+
+Players can "prick" each other with their thumbtacks. Players cannot be killed
+but they can use their thumbtacks to push the other player out of the way
+slightly, possibly also throwing them off a bit in the process. Pricking
+another player causes them to get pushed ahead by 1-2 tiles, but causes no
+other harm.
+
+Matches are timed. Once the match is over, the score is displayed, and the
+winner is the player who popped the most fruit.
+
+
+-------- EXTRAS -------------------------------------------------------------
+
+If time allows ...
+
+- Sound effects. Use of Qbasic "SoundLab" utility to generate sound effects?
+- Gravis Gamepad support
+- Network play? Use of mTCP? Almost certainly won't have time for this ...
+- Random "enemies" that spawn and snatch fruit before the players can get
+  them? Mutant-oversized fruit flys perhaps ... ? Or some kind of Locust
+  swarm maybe?
+
